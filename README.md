@@ -1,7 +1,51 @@
 isotope-data
 ============
 
-Data about many nuclear isotopes.
+This is a [component](https://github.com/component/component) that contains data about many nuclear isotopes.
+
+## Install
+For use in javascript projects:
+
+    component install 'reinpk/isotope-data'
+
+Then wherever you need to use it:
+
+```javascript
+    var isotopeData = require('isotope-data');
+```
+
+## Format
+The data is accessible as a dictionary of compact isotope names, mapping to the data for each isotope:
+
+```javascript
+{
+    'Pu-239' : {
+        halflife : 24100, // units in years
+        product  : 'U-235'
+    }
+}
+```
+
+or if the isotope has multiple decay products then the structure is:
+
+```javascript
+{
+    'Ac-227' : {
+        halflife : 21.772, // units in years
+        products : [
+            {
+                fraction : 0.9862, // unitless
+                product  : 'Th-227'
+            },
+            {
+                fraction : 0.0138,
+                product  : 'Fr-223'
+            }
+        ]
+    }
+}
+```
+
 
 
 ## License
