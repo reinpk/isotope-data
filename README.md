@@ -11,7 +11,7 @@ For use in javascript projects:
 Then wherever you need to use it:
 
 ```javascript
-    var isotopeData = require('isotope-data');
+var isotopeData = require('isotope-data');
 ```
 
 ## Format
