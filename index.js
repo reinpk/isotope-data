@@ -1,6 +1,5 @@
 var convert = require('convert');
 
-
 // Data taken from http://en.wikipedia.org/wiki/Decay_chain during Jan & Mar 2013
 module.exports = {
 
