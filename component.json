@@ -4,7 +4,9 @@
   "description": "Data about many nuclear isotopes.",
   "version": "0.0.1",
   "keywords": [],
-  "dependencies": {},
+  "dependencies": {
+    "reinpk/convert": "*"
+  },
   "development": {},
   "license": "MIT",
   "scripts": [
