@@ -1,8 +1,7 @@
-
 build: components index.js
 	@component build --dev
 
-components: component.json
+components:
 	@component install --dev
 
 clean:
@@ -13,4 +12,6 @@ test:
 		--reporter spec \
 		--require should
 
-.PHONY: clean
+release: clean build test
+
+.PHONY: clean test
