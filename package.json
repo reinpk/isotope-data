@@ -1,0 +1,16 @@
+{
+  "name": "isotope-data-reinpk",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "Data about many nuclear isotopes.",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "component": {
+    "scripts": {
+      "isotope-data/index.js": "index.js"
+    }
+  }
+}
