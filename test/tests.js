@@ -32,4 +32,21 @@ describe('isotope data', function () {
     });
   });
 
+  it('should all have a valid molar mass', function () {
+    _.each(_.keys(isotopeData), function (isotopeName) {
+
+      console.log(isotopeName);
+
+      var isotope = isotopeData[isotopeName];
+      expect(isotope).to.have.key('molarMass');
+      expect(isotope.molarMass).to.be.greaterThan(0);
+      expect(isotope.molarMass).to.be.lessThan(1);
+
+      // Values should also be close to the value in the name, like 239 in Pu-239 
+      var roughBasedOnName = parseInt(isotopeName.split('-')[1], 10) / 1000;
+      var error = (isotope.molarMass - roughBasedOnName) / roughBasedOnName;
+      expect(error).to.be.lessThan(0.001);
+    });
+  });
+
 });
