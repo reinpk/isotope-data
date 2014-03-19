@@ -1,4 +1,4 @@
-var convert = require('convert');
+var convert = require('convert-reinpk');
 
 // Halflives and products taken during Jan & Mar 2013 from
 //     http://en.wikipedia.org/wiki/Decay_chain 

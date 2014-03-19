@@ -1,20 +1,20 @@
+var expect = require('chai').expect;
+var isotopeData = require('../');
+
 describe('isotope data', function () {
 
-  var isotopeData = require('isotope-data'),
-      _           = require('component-underscore');
-
   it('should all have a valid half-life', function () {
-    _.each(_.keys(isotopeData), function (isotopeName) {
+    Object.keys(isotopeData).forEach(function (isotopeName) {
       var isotope = isotopeData[isotopeName];
-      expect(isotope).to.have.key('halflife');
+      expect(isotope.halflife).to.be.a('number');
       expect(isotope.halflife).to.be.greaterThan(0);
     });
   });
 
   it('should all have a valid product or products', function () {
-    _.each(_.keys(isotopeData), function (isotopeName) {
+    Object.keys(isotopeData).forEach(function (isotopeName) {
       var isotope = isotopeData[isotopeName];
-      expect(isotope.product || isotope.products).to.be.ok();
+      expect(isotope.product || isotope.products).to.be.ok;
 
       if (isotope.product) {
         expect(typeof isotope.product).to.equal('string');
@@ -22,23 +22,18 @@ describe('isotope data', function () {
       else {
         expect(typeof isotope.products).to.equal('object');
         expect(isotope.products.length).to.be.greaterThan(1);
-        _.each(isotope.products, function (product) {
-          expect(product).to.have.key('fraction');
-          expect(typeof product.fraction).to.equal('number');
-          expect(product).to.have.key('product');
-          expect(typeof product.product).to.equal('string');
+        isotope.products.forEach(function (product) {
+          expect(product.fraction).to.be.a('number');
+          expect(product.product).to.be.a('string');
         });
       }
     });
   });
 
   it('should all have a valid molar mass', function () {
-    _.each(_.keys(isotopeData), function (isotopeName) {
-
-      console.log(isotopeName);
-
+    Object.keys(isotopeData).forEach(function (isotopeName) {
       var isotope = isotopeData[isotopeName];
-      expect(isotope).to.have.key('molarMass');
+      expect(isotope.molarMass).to.be.a('number');
       expect(isotope.molarMass).to.be.greaterThan(0);
       expect(isotope.molarMass).to.be.lessThan(1);
 

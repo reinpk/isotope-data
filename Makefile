@@ -8,7 +8,10 @@ clean:
 	rm -fr build components
 
 test:
-	open test/index.html
+	@./node_modules/.bin/mocha \
+		--require should \
+		--reporter dot \
+		--bail
 
 release: clean build test
 

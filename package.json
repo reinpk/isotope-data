@@ -5,9 +5,11 @@
   "description": "Data about many nuclear isotopes.",
   "dependencies": {},
   "devDependencies": {
-    "mocha": "*",
-    "should": "*",
-    "underscore": "*"
+    "mocha": "~1.18.2",
+    "should": "~3.1.4",
+    "chai": "*",
+    "underscore": "~1.6.0",
+    "convert-reinpk": "reinpk/convert#0.0.1"
   },
   "component": {
     "scripts": {
