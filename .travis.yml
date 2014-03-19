@@ -4,5 +4,5 @@ notifications:
   email:
     - peter@rein.pk
 node_js:
-  - "0.10"
+  - "0.10.25"
 install: npm install
