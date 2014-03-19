@@ -1,0 +1,8 @@
+language: node_js
+script: make test
+notifications:
+  email:
+    - peter@rein.pk
+node_js:
+  - "0.10"
+install: npm install
