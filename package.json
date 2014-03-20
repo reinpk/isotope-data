@@ -7,8 +7,7 @@
   "devDependencies": {
     "mocha": "~1.18.2",
     "should": "~3.1.4",
-    "chai": "*",
-    "underscore": "~1.6.0",
+    "chai": "~1.9.1",
     "convert-reinpk": "reinpk/convert#0.0.1"
   },
   "component": {
